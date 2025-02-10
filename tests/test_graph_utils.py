@@ -1,3 +1,5 @@
+import os
+
 import networkx as nx
 import pytest
 
@@ -16,8 +18,19 @@ def test_load_graph():
     assert len(G.edges) == 3  # エッジ数が3
     assert G[0][1]["weight"] == 30  # エッジの重みが正しい
 
+    # テスト後にファイルを削除
+    if os.path.exists(file_name):
+        os.remove(file_name)
+
 
 def test_generate_ba_graph():
+    file_name = "test_ba_graph.txt"
+
+    # グラフを生成し、エッジリストとして保存
     G = generate_ba_graph(10)
     assert len(G.nodes) == 10  # 10ノードがあることを確認
     assert len(G.edges) > 0  # エッジが存在することを確認
+
+    # テスト後にファイルを削除
+    if os.path.exists(file_name):
+        os.remove(file_name)
