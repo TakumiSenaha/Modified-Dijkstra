@@ -50,7 +50,7 @@ conda activate modified_dijkstra_env
 ### Usage
 Run the algorithm with a given graph file and source-destination pair:
 ```bash
-python src/modified_dijkstra.py networks/sample_graph.txt 1 10
+python src/modified_dijkstra.py networks/sample_graph 30 32
 ```
 
 ### Example
