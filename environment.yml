@@ -1,0 +1,17 @@
+name: modified_dijkstra_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - networkx
+  - matplotlib
+  - pytest
+  - jupyter
+  - black
+  - flake8
+  - mypy
+  - isort
+  - pip
+  - pip:
+      - notebook
